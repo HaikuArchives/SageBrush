@@ -15,4 +15,4 @@ namespace Units
 	float GetDivisions(Type units);
 }
 
-#endif /* UNITS */
+#endif /* UNITS_H */
