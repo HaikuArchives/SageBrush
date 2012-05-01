@@ -1,5 +1,5 @@
-#ifndef SCROLLVIEWWITHRULERS_H
-#define SCROLLVIEWWITHRULERS_H
+#ifndef SCROLL_VIEW_WITH_RULERS_H
+#define SCROLL_VIEW_WITH_RULERS_H
 
 #include <View.h>
 #include <ScrollView.h>
@@ -46,4 +46,4 @@ inline Ruler* ScrollViewWithRulers::GetRuler(orientation ruler)
 	return (HasRulers()? ((ruler == B_HORIZONTAL)? ruler_h: ruler_v): 0);
 }
 
-#endif /* SCROLLVIEWWITHRULERS_H */
+#endif /* SCROLL_VIEW_WITH_RULERS_H */

@@ -1,5 +1,5 @@
-#ifndef SIMPLETRIANGLESLIDER_H
-#define SIMPLETRIANGLESLIDER_H
+#ifndef SIMPLE_TRIANGLE_SLIDER_H
+#define SIMPLE_TRIANGLE_SLIDER_H
 
 #include <View.h>
 #include <Slider.h>
@@ -19,4 +19,4 @@ class SimpleTriangleSlider: public BView
 	virtual int32 Value(void) const;
 };
 
-#endif /* SIMPLETRIANGLESLIDER_H */
+#endif /* SIMPLE_TRIANGLE_SLIDER_H */

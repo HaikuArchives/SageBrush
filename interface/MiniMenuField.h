@@ -1,5 +1,5 @@
-#ifndef MINIMENUFIELD_H
-#define MINIMENUFIELD_H
+#ifndef MINI_MENU_FIELD_H
+#define MINI_MENU_FIELD_H
 
 #include <PictureButton.h>
 #include <PopUpMenu.h>
@@ -18,4 +18,4 @@ class MiniMenuField: public BPictureButton, public BPopUpMenu
 	virtual void AttachedToWindow(void);
 };
 
-#endif /* MINIMENUFIELD_H */
+#endif /* MINI_MENU_FIELD_H */
