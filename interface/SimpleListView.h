@@ -4,20 +4,19 @@
 #include <SupportDefs.h>
 #include <Point.h>
 #include <Rect.h>
-#include <ListView.h>
 #include <TextView.h>
 #include <Message.h>
 #include <MessageFilter.h>
 #include <Handler.h>
-#include <Debug.h>
+#include <ListView.h>
 
-class SimpleListView: public BListView
+template <typename T> class SimpleListView: public T
 {
   private:
   	BTextView *editView;
   	BWindow *activeWindow;
   	
-  	BRect TitleRect(int32 index);
+  	BRect TextRect(int32 index);
 
 	static filter_result editing_filter(BMessage *m, BHandler **h, BMessageFilter *f);
   	
@@ -41,5 +40,7 @@ class SimpleListView: public BListView
 	
 	virtual bool InitiateDrag(BPoint where, int32 index, bool wasSelected);
 };
+
+#include "SimpleListViewDef.h"
 
 #endif /* SIMPLE_LIST_VIEW_H */

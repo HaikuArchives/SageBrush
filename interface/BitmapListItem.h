@@ -4,9 +4,9 @@
 #include <SupportDefs.h>
 #include <Rect.h>
 #include <Bitmap.h>
-#include "TitledListItem.h"
+#include "EditableListItem.h"
 
-class BitmapListItem: public TitledListItem
+class BitmapListItem: public EditableListItem
 {
 	BBitmap *bitmap;
 	BRect bitmapFrame;

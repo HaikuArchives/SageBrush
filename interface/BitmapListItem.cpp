@@ -3,7 +3,7 @@
 
 BitmapListItem::BitmapListItem(const char *text, uint32 outlineLevel = 0, 
 	bool expanded = true):
-	TitledListItem(text, outlineLevel, expanded),
+	EditableListItem(text, outlineLevel, expanded),
 	bitmap(0), bitmapFrame(BRect()), destroyBitmap(false)
 {
 }
@@ -29,7 +29,7 @@ void BitmapListItem::SetBitmap(BBitmap *bitmap, BRect frame, bool destroy)
 		
 void BitmapListItem::DrawItem(BView *view, BRect itemRect, bool drawEverything)
 {
-	TitledListItem::DrawItem(view, itemRect, drawEverything);
+	EditableListItem::DrawItem(view, itemRect, drawEverything);
 
 	BRect frame = bitmapFrame;
 	frame.OffsetBy(itemRect.left, itemRect.top);
