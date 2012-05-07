@@ -7,6 +7,7 @@
 #include <OutlineListView.h>
 #include "PropertyWindow.h"
 #include "PropertyListItem.h"
+#include "AddPropertyItemWindow.h"
 
 PropertyWindow::PropertyWindow():
 	BWindow(BRect(40, 40, 400, 320), "Property Editor", B_TITLED_WINDOW,
@@ -105,4 +106,13 @@ void PropertyWindow::FrameResized(float width, float height)
 
 void PropertyWindow::MessageReceived(BMessage *message)
 {
+	switch (message->what)
+	{
+		case 'addc':
+			(new AddPropertyItemWindow())->Show();
+			break;
+			
+		default:
+			BWindow::MessageReceived(message);
+	}
 }
