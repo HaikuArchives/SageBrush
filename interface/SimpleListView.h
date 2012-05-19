@@ -2,7 +2,6 @@
  * Authors:
  *  Vladislav Burundukov <vlad.be@gmail.com>
  */
-
 #ifndef SIMPLE_LIST_VIEW_H
 #define SIMPLE_LIST_VIEW_H
 

@@ -2,7 +2,6 @@
  * Authors:
  *  Vladislav Burundukov <vlad.be@gmail.com>
  */
-
 #include "PropertyListItem.h"
 
 PropertyListItem::PropertyListItem(const char *text, uint32 outlineLevel = 0, 

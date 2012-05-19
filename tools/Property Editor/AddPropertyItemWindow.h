@@ -2,7 +2,6 @@
  * Authors:
  *  Vladislav Burundukov <vlad.be@gmail.com>
  */
-
 #ifndef ADD_PROPERTY_ITEM_WINDOW_H
 #define ADD_PROPERTY_ITEM_WINDOW_H
 

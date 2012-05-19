@@ -2,7 +2,6 @@
  * Authors:
  *  Vladislav Burundukov <vlad.be@gmail.com>
  */
-
 #include <AppDefs.h>
 #include <Message.h>
 #include <View.h>

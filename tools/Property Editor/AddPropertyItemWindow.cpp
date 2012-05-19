@@ -2,7 +2,6 @@
  * Authors:
  *  Vladislav Burundukov <vlad.be@gmail.com>
  */
-
 #include <Application.h>
 #include <SupportDefs.h>
 #include <Button.h>

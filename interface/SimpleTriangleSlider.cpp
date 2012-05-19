@@ -2,7 +2,6 @@
  * Authors:
  *  Vladislav Burundukov <vlad.be@gmail.com>
  */
-
 #include <InterfaceDefs.h>
 #include "SimpleTriangleSlider.h"
 

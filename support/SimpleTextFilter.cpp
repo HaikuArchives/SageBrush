@@ -2,7 +2,6 @@
  * Authors:
  *  Vladislav Burundukov <vlad.be@gmail.com>
  */
-
 #include <TypeConstants.h>
 #include <String.h>
 #include <map>

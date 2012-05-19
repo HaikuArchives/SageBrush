@@ -2,7 +2,6 @@
  * Authors:
  *  Vladislav Burundukov <vlad.be@gmail.com>
  */
-
 #include <Rect.h>
 #include <Menu.h>
 #include <MenuBar.h>

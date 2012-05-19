@@ -2,7 +2,6 @@
  * Authors:
  *  Vladislav Burundukov <vlad.be@gmail.com>
  */
-
 #include <Picture.h>
 #include <MenuItem.h>
 #include <Window.h>

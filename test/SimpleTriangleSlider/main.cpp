@@ -2,7 +2,6 @@
  * Authors:
  *  Vladislav Burundukov <vlad.be@gmail.com>
  */
-
 #include <View.h>
 #include <Box.h>
 #include <InterfaceDefs.h>

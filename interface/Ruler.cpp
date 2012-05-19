@@ -2,7 +2,6 @@
  * Authors:
  *  Vladislav Burundukov <vlad.be@gmail.com>
  */
-
 #include <Font.h>
 #include <ScrollBar.h>
 #include <Window.h>

@@ -2,7 +2,6 @@
  * Authors:
  *  Vladislav Burundukov <vlad.be@gmail.com>
  */
-
 #ifndef VIEWPORT_H
 #define VIEWPORT_H
 

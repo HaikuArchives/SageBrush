@@ -2,7 +2,6 @@
  * Authors:
  *  Vladislav Burundukov <vlad.be@gmail.com>
  */
-
 #include "TestWinAndApp.h"
 #include <View.h>
 #include "ScrollViewWithRulers.h"

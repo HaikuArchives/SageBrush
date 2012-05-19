@@ -2,7 +2,6 @@
  * Authors:
  *  Vladislav Burundukov <vlad.be@gmail.com>
  */
-
 #ifndef EDITABLE_LIST_ITEM_H
 #define EDITABLE_LIST_ITEM_H
 

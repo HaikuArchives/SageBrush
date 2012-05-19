@@ -2,7 +2,6 @@
  * Authors:
  *  Vladislav Burundukov <vlad.be@gmail.com>
  */
-
 #ifndef MINI_MENU_FIELD_H
 #define MINI_MENU_FIELD_H
 

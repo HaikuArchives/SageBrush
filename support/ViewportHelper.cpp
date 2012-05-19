@@ -2,7 +2,6 @@
  * Authors:
  *  Vladislav Burundukov <vlad.be@gmail.com>
  */
-
 #include <Handler.h>
 #include <Message.h>
 #include <MessageFilter.h>

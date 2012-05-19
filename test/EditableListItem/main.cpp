@@ -2,7 +2,6 @@
  * Authors:
  *  Vladislav Burundukov <vlad.be@gmail.com>
  */
-
 #define W_WIDTH 320
 #define W_HEIGHT 500
 

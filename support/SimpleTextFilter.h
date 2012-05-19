@@ -2,7 +2,6 @@
  * Authors:
  *  Vladislav Burundukov <vlad.be@gmail.com>
  */
-
 #ifndef SIMPLE_TEXT_FILTER_H
 #define SIMPLE_TEXT_FILTER_H
 
