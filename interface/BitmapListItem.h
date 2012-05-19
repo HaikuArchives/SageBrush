@@ -1,3 +1,8 @@
+/*
+ * Authors:
+ *  Vladislav Burundukov <vlad.be@gmail.com>
+ */
+
 #ifndef BITMAP_LIST_ITEM_H
 #define BITMAP_LIST_ITEM_H
 

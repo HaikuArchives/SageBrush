@@ -1,3 +1,8 @@
+/*
+ * Authors:
+ *  Vladislav Burundukov <vlad.be@gmail.com>
+ */
+
 #ifndef RULER_H
 #define RULER_H
 

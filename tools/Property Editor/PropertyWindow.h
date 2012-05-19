@@ -1,3 +1,8 @@
+/*
+ * Authors:
+ *  Vladislav Burundukov <vlad.be@gmail.com>
+ */
+
 #ifndef PROPERTY_WINDOW_H
 #define PROPERTY_WINDOW_H
 

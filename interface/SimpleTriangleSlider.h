@@ -1,3 +1,8 @@
+/*
+ * Authors:
+ *  Vladislav Burundukov <vlad.be@gmail.com>
+ */
+
 #ifndef SIMPLE_TRIANGLE_SLIDER_H
 #define SIMPLE_TRIANGLE_SLIDER_H
 

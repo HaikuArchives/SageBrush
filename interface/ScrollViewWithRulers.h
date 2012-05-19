@@ -1,3 +1,8 @@
+/*
+ * Authors:
+ *  Vladislav Burundukov <vlad.be@gmail.com>
+ */
+
 #ifndef SCROLL_VIEW_WITH_RULERS_H
 #define SCROLL_VIEW_WITH_RULERS_H
 

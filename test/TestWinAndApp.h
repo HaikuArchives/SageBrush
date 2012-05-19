@@ -1,3 +1,8 @@
+/*
+ * Authors:
+ *  Vladislav Burundukov <vlad.be@gmail.com>
+ */
+
 #include <Application.h>
 #include <Window.h>
 #include <Debug.h>

@@ -1,3 +1,8 @@
+/*
+ * Authors:
+ *  Vladislav Burundukov <vlad.be@gmail.com>
+ */
+
 #ifndef PROPERTY_LIST_ITEM_H
 #define PROPERTY_LIST_ITEM_H
 
