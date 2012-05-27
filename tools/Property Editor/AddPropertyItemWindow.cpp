@@ -36,6 +36,8 @@ AddPropertyItemWindow::AddPropertyItemWindow():
 	B_MODAL_WINDOW,
 	B_ASYNCHRONOUS_CONTROLS | B_NOT_RESIZABLE | B_NOT_ZOOMABLE | B_AUTO_UPDATE_SIZE_LIMITS)
 {
+	addButton = NULL;
+	
 	BMenu *menu = new BMenu("type_menu");
 	
 	BMenuField *menu_field = new BMenuField(BRect(), "menu_field", 
@@ -50,8 +52,8 @@ AddPropertyItemWindow::AddPropertyItemWindow():
 	BButton *button1 = new BButton(BRect(), "button1", "Cancel", 
 		new BMessage('cncl'));
 		
-	BButton *button2 = new BButton(BRect(), "button2", "Add", 
-		new BMessage('addi'));
+	addButton = new BButton(BRect(), "button2", "Add", new BMessage('addi'));
+	addButton->SetEnabled(false);
 	
 	BStringView *string_view1 = new BStringView(BRect(), "string_view1", 
 		"Type:");
@@ -112,7 +114,7 @@ AddPropertyItemWindow::AddPropertyItemWindow():
 		.Add(BGroupLayoutBuilder(B_HORIZONTAL, 10)
 			.SetInsets(5, 5, 5, 5)
 			.Add(button1)
-			.Add(button2)
+			.Add(addButton)
 		)
 	);
 	
@@ -167,9 +169,14 @@ void AddPropertyItemWindow::MessageReceived(BMessage *message)
 		
 		case 'tchg':
 			break;
+			
+		case CORRECT_TEXT:
+		case NOT_CORRECT_TEXT:
+			if (addButton)
+				addButton->SetEnabled((message->what == CORRECT_TEXT));
+			break;
 		
 		default:
 			BWindow::MessageReceived(message);
-	}
-	
+	}	
 }

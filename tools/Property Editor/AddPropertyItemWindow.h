@@ -6,10 +6,11 @@
 #define ADD_PROPERTY_ITEM_WINDOW_H
 
 #include <Window.h>
+#include <Button.h>
 
 class AddPropertyItemWindow: public BWindow
 {
-  	
+  	BButton *addButton;
   public:
 	AddPropertyItemWindow();
 	~AddPropertyItemWindow();

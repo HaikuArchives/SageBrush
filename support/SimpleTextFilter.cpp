@@ -2,29 +2,31 @@
  * Authors:
  *  Vladislav Burundukov <vlad.be@gmail.com>
  */
-#include <TypeConstants.h>
-#include <String.h>
-#include <map>
-#include <regex.h>
-#include <ClassInfo.h>
+
+#include <Looper.h>
 #include <TextView.h>
 #include <Clipboard.h>
+#include <TypeConstants.h>
+#include <String.h>
+#include <ClassInfo.h>
+#include <map>
+#include <regex.h>
 #include <cctype>
 #include "SimpleTextFilter.h"
 
-#include <cstdio>
-
 typedef std::map<int, std::pair<BString, pair<BString, regex_t> > > Definition;
+
 static Definition definition;
+
 static regex_t name_cere;
 
-namespace _private
+namespace my_private
 {
 	class module_init
 	{
 		public:
 			module_init();
-			~module_init() {}
+			~module_init();
 	};
 		
 	module_init InitModule = module_init();
@@ -82,10 +84,10 @@ void textHelper(BMessage *m, BString &text, int32 start, int32 end)
 	int32 modifiers = 0;
 
 	if (m->FindInt8("byte", &byte) != B_OK)
-		return ; //B_DISPATCH_MESSAGE;
+		return ;
 
 	if (m->FindString("bytes", &bytes) != B_OK)
-		return ; //B_DISPATCH_MESSAGE;
+		return ;
 	
 	if (byte == B_BACKSPACE || byte == B_DELETE)
 	{
@@ -154,13 +156,9 @@ filter_result filterName(BMessage *m, BHandler **h, BMessageFilter *f)
 	textHelper(m, text, start, end);
 
 	if (regexec(&name_cere, text.String(), 1, &pm, 0) == 0)
-	{
-		printf("cool - %s\n", text.String());
-	}
+		(*h)->Looper()->PostMessage(new BMessage(CORRECT_TEXT));
 	else
-	{
-		printf("bad - %s\n", text.String());
-	}
+		(*h)->Looper()->PostMessage(new BMessage(NOT_CORRECT_TEXT));
 
 	return B_DISPATCH_MESSAGE;
 }
@@ -171,7 +169,7 @@ filter_result filterTypes(BMessage *m, BHandler **h, BMessageFilter *f)
 	return B_DISPATCH_MESSAGE;
 }
 
-_private::module_init::module_init()
+my_private::module_init::module_init()
 {
 	setDefinitionType(B_ALIGNMENT_TYPE, "BAlignment", "");
 	setDefinitionType(B_RECT_TYPE, "BRect", "");
@@ -195,6 +193,10 @@ _private::module_init::module_init()
 	setDefinitionType(B_MESSAGE_TYPE, "BMessage", "");
 	setDefinitionType(B_RAW_TYPE, "raw", "");
 	
-	regcomp(&name_cere, "^[A-Za-z][A-Za-z0-9]{0,31}$", REG_EXTENDED);
+	regcomp(&name_cere, "^[_A-Za-z][_A-Za-z0-9]{0,31}$", REG_EXTENDED);
 }
 
+my_private::module_init::~module_init()
+{
+	regfree(&name_cere);
+}
